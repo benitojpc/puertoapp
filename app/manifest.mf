@@ -1,0 +1,2 @@
+Main-Class: puertoapp.app.App
+Class-Path: . javafx.controls javafx.fxml javafx.graphics

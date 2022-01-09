@@ -1,0 +1,38 @@
+/* 
+    Created on : 20-sep-2018, 11:56:50
+    Author     : Benito Palacios
+*/
+
+#anchorPane, #mainTemplate {
+    -fx-background-color: linear-gradient(#8796e9, #3366ff);
+}
+
+#menuPane {
+    -fx-background-color: lightgray;
+}
+
+#areasPane {
+    -fx-background-color: #00416A;
+}
+
+#areasPane {
+    -fx-background-color: lightgray;
+}
+
+#tabPane {
+    -fx-background-color: #cea780;
+    -fx-border-color: lightgray;
+    -fx-border-size: 2pt;
+}
+
+#loginPane {
+    -fx-background-color: #a3bded;
+    -fx-border-color: lightgray;
+    -fx-border-size: 2pt;
+}
+
+#dataPane {
+    -fx-background-color: #a3bded;
+    -fx-border-color: black;
+    -fx-border-size: 2pt;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="mainTemplate" fx:id="mainTemplate" stylesheets="@../css/Background.css" maxHeight="800.0" maxWidth="1080.0" minHeight="800.0" minWidth="1080.0" prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox alignment="CENTER" maxHeight="800.0" maxWidth="1080.0" minHeight="800.0" minWidth="1080.0" prefHeight="800.0" prefWidth="1080.0" spacing="2.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane id="header" maxHeight="120.0" maxWidth="1084.0" minHeight="40.0" minWidth="1024.0" prefHeight="59.0" prefWidth="1076.0">
+                   <children>
+                       <fx:include source="header.fxml" />
+                   </children>
+                </AnchorPane>
+                <Pane id="main" maxWidth="1080.0" minWidth="1080.0" prefHeight="724.0" prefWidth="1080.0">
+                   <padding>
+                      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                   </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+                </Pane>
+                <AnchorPane id="footer" maxHeight="81.0" maxWidth="1136.0" minHeight="0.0" minWidth="1024.0" prefHeight="81.0" prefWidth="1072.0">
+                   <children>
+                       <fx:include source="footer.fxml" />
+                   </children>
+                    <VBox.margin>
+                       <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </VBox.margin>
+                    <padding>
+                       <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                    </padding>
+                </AnchorPane>
+            </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+        </VBox>
+    </children>
+</AnchorPane>

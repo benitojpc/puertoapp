@@ -1,0 +1,13 @@
+plugins {
+    id 'puertoapp.java-library-conventions'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+}
+
+javafx {
+    version = "17"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics' ]
+}
+
+dependencies {
+    //api project(':list')
+}

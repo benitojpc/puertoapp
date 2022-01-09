@@ -1,0 +1,53 @@
+plugins {
+    id 'puertoapp.java-application-conventions'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+    id 'org.beryx.jlink' version '2.24.4'
+}
+
+java {
+    modularity.inferModulePath.set(false)
+}
+
+javafx {
+    version = "17"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics' ]
+}
+
+dependencies {
+    implementation project(':libbds')
+    implementation project(':libjfx')
+}
+    
+def nameProg      = 'puertoapp-1.0.1'
+def mainClassName = 'puertoapp.app.App'
+
+application {
+    // Define the main class for the application.
+    mainClass = 'puertoapp.app.App'
+}
+
+task copyResources(type: Copy) {
+    from 'src/main/resources' into 'build/resources/'
+}
+
+task uberjar(type: Jar) {
+    manifest {
+        from 'manifest.mf'
+    }
+    baseName            = nameProg
+    duplicatesStrategy  = DuplicatesStrategy.INCLUDE
+    classifier          = 'all'
+
+    //from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    //with jar
+}
+
+jlink {
+    
+    targetPlatform("linux") {
+        jdkHome = "/usr/lib/jvm/java-17"
+        addOptions('--compress', '2', '--no-header-files', '--no-man-pages', '--bind-services')
+        addExtraModulePath("/usr/lib/jvm/jmods17")
+    }
+
+}

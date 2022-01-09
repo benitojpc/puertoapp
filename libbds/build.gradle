@@ -1,0 +1,8 @@
+plugins {
+    id 'puertoapp.java-library-conventions'
+}
+
+dependencies {
+    implementation files ( 'extlibs/java.persistence.jar' )
+    implementation files ( 'extlibs/postgresql-42.2.20.jar' )
+}
